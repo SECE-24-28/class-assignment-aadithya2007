@@ -16,3 +16,10 @@ h1,#head{
 input[type="text"]{
     color:aqua;
 }
+div{
+    height:500px;
+    width:500px;
+    background-image: url(sample);
+    background-repeat:repeat-x;
+    background-attachment:fixed;
+}
