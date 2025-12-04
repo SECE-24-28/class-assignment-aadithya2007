@@ -1,3 +1,18 @@
 h3{
     color:bisque;
 }
+.head{
+ color:aliceblue;
+}
+#head{
+ color:red;
+}
+*{
+  color: azure;
+}
+h1,#head{
+    color:aqua;
+}
+input[type="text"]{
+    color:aqua;
+}
