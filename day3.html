@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        #animations,#transitions{
+            margin:1rem;
+            width:200px;
+            height:200px;
+            background-color:aqua;
+        }
+        #animations{
+            animation-name:colorchange;
+            animation-duration:5000ms;
+        }
+        @keyframes colorchange{
+            from{
+                background-color:aqua;
+            }
+            to{
+                background-color:yellow;
+            }
+        }
+        
+        #transitions{
+            transition-property: width;
+            transition: 200ms;
+            transition-timing-function:ease-in-out;
+        }
+        #transitions:hover{
+            width:300px;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="animations"></div>
+    <div id="transitions"></div>
+    
+</body>
+</html>
