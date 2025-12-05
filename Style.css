@@ -19,7 +19,9 @@ input[type="text"]{
 div{
     height:500px;
     width:500px;
+    background-color: aqua;
     background-image: url(sample);
     background-repeat:repeat-x;
     background-attachment:fixed;
+    
 }
