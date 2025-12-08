@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clock UI</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    
+    .left {
+        width: 50%;
+        background: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 8vw;
+        font-weight: 700;
+    }
+
+    
+    .right {
+        width: 50%;
+        background: #D7FF2F; 
+        color: black;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20vw;
+        font-weight: 700;
+    }
+
+    
+    .pm {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 3vw;
+        font-weight: 700;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+        05:48
+    </div>
+
+    <div class="right">
+        <div class="pm">PM</div>
+        20
+    </div>
+
+</div>
+
+</body>
+</html>
