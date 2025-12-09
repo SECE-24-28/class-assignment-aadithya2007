@@ -1,6 +1,7 @@
 //var let and const
 //var is a functional scope variable
 //let and const are block scope variable
+console.log(a);//undefined
 var a = 10;
 var b=a;
 a=20;
@@ -8,6 +9,7 @@ var a=10;
 console.log("a",a);
 console.log("b",b);
 //problem of var keyword is that it can be reinitialized or redeclared
+console.log(c);//reference error
 let c=10;
 let d=a;
 a=20;
