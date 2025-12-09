@@ -27,3 +27,13 @@ console.log(personCopy2);
 let personCopy3=JSON.parse(JSON.stringify(person));//deep copy
 console.log(person);
 console.log(personCopy3);
+
+//rest operator
+function sum(...args){
+    let total=0;
+    for(let i of args){
+        total+=i;
+    }
+    return total;
+}
+console.log(sum(1,2,3,4,5,6,7,8,9,10));
