@@ -26,10 +26,10 @@ console.log("_____________");
 
 
 //callback function
-function main(callback){
+function main(add){
     var sum=30+40;
     console.log("Sum is "+sum);
-    callback(sum)
+    add(sum);
 }
 function second(num){
     console.log("Hello from second function",num);
