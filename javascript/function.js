@@ -23,3 +23,16 @@ var divide=(a,b)=>{
 
 console.log(divide(20,5));
 console.log("_____________");
+
+
+//callback function
+function main(callback){
+    var sum=30+40;
+    console.log("Sum is "+sum);
+    callback(sum)
+}
+function second(num){
+    console.log("Hello from second function",num);
+}
+main(second);
+//second();
