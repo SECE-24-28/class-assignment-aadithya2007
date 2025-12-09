@@ -1,4 +1,6 @@
 //var let and const
+//var is a functional scope variable
+//let and const are block scope variable
 var a = 10;
 var b=a;
 a=20;
