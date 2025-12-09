@@ -19,6 +19,7 @@ console.log("_____________");
 //arrow function
 var divide=(a,b)=>{
     return a/b;
-}
+};
+
 console.log(divide(20,5));
 console.log("_____________");
