@@ -36,3 +36,4 @@ function second(num){
 }
 main(second);
 //second();
+//this is callback hell or pyramid of dome
