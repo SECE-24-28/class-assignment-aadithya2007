@@ -13,11 +13,13 @@ console.log(str1.replace("o","O"));
 console.log(str1.toUpperCase());
 console.log(str1.replaceAll("o","O"));
 console.log(str1.concat(" hello"));
-let str2="    hello world      "
+let str2="    hello world      ";
 console.log(str2);
 console.log(str2.trim());
 console.log(str2.trimStart());
 console.log(str2.trimEnd());
 console.log(str1.repeat(5));
 console.log(str1.split(""));
+console.log(str1.padStart(20,"*"));
+console.log(str1.padEnd(20,"*"));
 
