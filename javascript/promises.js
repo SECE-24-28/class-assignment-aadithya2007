@@ -13,7 +13,7 @@ promise
    .catch((reject)=>console.log(reject));
 
 
-//ES8 async & avait
+//fetch method and promise
 
 fetch("https://jsonplaceholder.typicode.com/users").then((response)=>{
     console.log(response);
@@ -24,3 +24,16 @@ fetch("https://jsonplaceholder.typicode.com/users").then((response)=>{
     console.log(data)
 })
 .catch((error)=>console.log(error));
+
+//async and await
+const fetchuser=async()=>{
+    try{
+    let response=await fetch("https://jsonplaceholder.typicode.com/users");
+    let data=await response.json();
+    console.log("data",data);
+}catch(error){
+    console.log("error",error);
+}
+}
+
+fetchuser();
