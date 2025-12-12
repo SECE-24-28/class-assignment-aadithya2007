@@ -41,3 +41,6 @@ function toggleText(){
     }
 }
 
+document.getElementById("hdb").addEventListener("click",hideText);
+document.getElementById("hdb").addEventListener("mouseover",showText);
+
