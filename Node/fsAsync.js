@@ -1,4 +1,4 @@
-const fs = require("fs").promises;
+const fs = require("fs");
 const path = require("path");
 
 const fpath = path.join(__dirname, "demoFolder");
