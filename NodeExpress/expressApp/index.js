@@ -8,24 +8,28 @@ const items = [
     { id: 2, itemName: "notebook", price: 50 }
 ];
 
-app.use((req,res)=>{
-    console.log("ths is a middleware");
-    req.currentTime=new Date();
-    
+// ✅ Proper middleware
+app.use((req, res, next) => {
+    console.log("this is a middleware");
+    req.currentTime = new Date();
+    next(); // 🔥 REQUIRED
 });
+
+// Routes
 app.get('/', (req, res) => {
     res.send('Hello, World!');
-
 });
 
 app.get('/api/data', (req, res) => {
     console.log("Current Time:", req.currentTime);
+    res.json({
+        message: "Data received",
+        time: req.currentTime
+    });
 });
-
 
 app.get('/api/items/:id', (req, res) => {
     const id = Number(req.params.id);
-    console.log(req.params.id);
     const item = items.find(i => i.id === id);
 
     if (!item) {
@@ -35,7 +39,7 @@ app.get('/api/items/:id', (req, res) => {
     res.json(item);
 });
 
-
+// Server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
