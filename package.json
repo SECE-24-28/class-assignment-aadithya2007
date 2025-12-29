@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/SECE-24-28/class-assignment-aadithya2007#readme",
   "dependencies": {
+    "axios": "^1.13.2",
     "morgan": "^1.10.1"
   }
 }

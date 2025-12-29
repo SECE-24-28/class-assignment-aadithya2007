@@ -16,7 +16,7 @@ const items = [
 // Create
 app.post('/add-items', (req, res) => {
     console.log(req.body);
-    // Fix: Calculate ID based on the last item's ID to prevent duplicates after deletion
+    
     const newId = items.length > 0 ? items[items.length - 1].id + 1 : 1;
 
     items.push({
@@ -31,7 +31,7 @@ app.post('/add-items', (req, res) => {
             res.status(500).send("Internal Server Error");
         }
         else {
-            // Fix: Sent 'items' directly to match the format of the GET request (removed curly braces)
+          
             res.status(201).send(items);
         }
     });
@@ -41,7 +41,7 @@ app.post('/add-items', (req, res) => {
 app.get('/items', (req, res) => {
     fs.readFile('items.json', 'utf8', (err, data) => {
         if (err) {
-            // Fix: Handle case where file doesn't exist yet (first run)
+          
             if (err.code === 'ENOENT') {
                 res.status(200).send(items);
             } else {
@@ -56,7 +56,7 @@ app.get('/items', (req, res) => {
     });
 });
 
-// Update
+
 app.put('/edit-item/', (req, res) => {
     const { id, name, price } = req.body;
     let idFound = false;
@@ -84,13 +84,12 @@ app.put('/edit-item/', (req, res) => {
     }
 });
 
-// Delete
+
 app.delete("/item/:id", (req, res) => {
     const id = req.params.id;
     const itemIndex = items.findIndex((item) => item.id == id);
 
-    // Fix: splice must be INSIDE the check.
-    // Previously, splice(-1, 1) deleted the last item if id wasn't found.
+ 
     if(itemIndex != -1){
         items.splice(itemIndex, 1);
 
